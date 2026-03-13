@@ -20,35 +20,99 @@ Diseñar y construir un ecosistema virtual completamente funcional, compuesto po
 
 Este laboratorio reproduce un entorno real de un **datacenter virtual**.
 
+---
 
 ## 🏗️ Arquitectura del Laboratorio
 
-- **Host Físico (VMware Workstation Pro)**
-  - Ejecuta los hipervisores nested ESXi
-  - Gestiona el networking virtual base y el hardware físico
+### 🖥️ Host Físico – VMware Workstation Pro
+El host físico actúa como plataforma base donde se ejecutan todos los hipervisores y máquinas virtuales del entorno.  
+Desde aquí se gestiona el hardware físico (CPU, RAM, almacenamiento, redes) que alimenta todo el laboratorio.
 
-  ### 🖥️ Hipervisores ESXi (Nested)
-  - **ESXi #1**
-    - VMkernel (Management)
-    - Red de gestión + acceso al vCenter
-  - **ESXi #2**
-    - Nodo adicional para pruebas
-  - **ESXi #3**
-    - Nodo adicional para escenarios distribuidos
+---
 
-  ### 🎛️ vCenter Server Appliance (VCSA)
-  - Administración centralizada del clúster
-  - Inventario de hosts ESXi
-  - Configuración del **Distributed Switch (vDS)**
-  - Requiere:
-    - DNS interno (Windows Server)
-    - FQDN resolvible
-    - Configuración de red estable
+### 🔧 Hipervisores ESXi (Nested)
 
-  ### 🧩 Servicios complementarios
-  - **Windows Server (DNS)**
-    - Zonas directas e inversas
-    - Dependencia obligatoria para VCSA
+#### ✔ ESXi #1 — Nodo Principal
+- Host configurado con **Management Network**
+- Interfaces **VMkernel** para:
+  - Gestión (vSphere)
+  - Comunicación con vCenter
+- Almacena máquinas virtuales de pruebas
+
+#### ✔ ESXi #2 — Nodo Adicional
+- Participa como host extra dentro del laboratorio
+- Permite simular escenarios multi-host
+- Útil para pruebas de migraciones, redes, almacenamiento y clustering
+
+#### ✔ ESXi #3 — Nodo Adicional
+- Segundo host extra para topología avanzada
+- Usado para:
+  - vSphere Distributed Switch (vDS)
+  - Alta disponibilidad (HA) en entornos de simulación
+  - Balanceo de carga entre hosts
+
+---
+
+### 🎛️ vCenter Server Appliance (VCSA)
+El centro de control del entorno VMware.
+
+Incluye:
+
+- **Gestión centralizada** de los hosts ESXi
+- **Inventario completo** de máquinas virtuales y redes
+- **Configuración del Distributed Virtual Switch (vDS)**
+- **Supervisión de rendimiento y logs**
+- **Usuarios, roles, permisos y certificados**
+
+Requisitos complementarios:
+
+- Un **DNS interno** que resuelva el FQDN del vCenter
+- Configuración estable de red y VMkernel en cada host
+- IP estática + registros A/PTR en Windows DNS
+
+---
+
+### 🌐 Servicios Adicionales
+
+#### 🧩 Windows Server (DNS)
+- Proporciona:
+  - Resolución directa (A)
+  - Zona inversa (PTR)
+  - Requisito esencial para desplegar vCenter
+- Mantiene consistencia entre los hosts y el VCSA
+
+#### 🛜 Redes del Laboratorio
+- Gestión
+- Tráfico de máquinas virtuales
+- VMkernel (Management)
+- Opcional:
+  - vMotion
+  - vSAN
+  - Storage Network (iSCSI/NFS)
+
+---
+
+### 🧱 Resumen Visual
+
+- **Host Físico**
+  - Workstation Pro (hipervisor tipo 2)
+
+- **Hipervisores Nested**
+  - ESXi #1 (principal)
+  - ESXi #2 (nodo)
+  - ESXi #3 (nodo)
+
+- **Orquestación**
+  - VCSA (vCenter Server Appliance)
+
+- **Servicios de Red**
+  - DNS interno (Windows Server)
+
+- **Componentes Avanzados**
+  - Distributed Switch (vDS)
+  - Gestión centralizada del clúster
+
+---
 
 ## 📸 Imágenes del Proyecto
 
