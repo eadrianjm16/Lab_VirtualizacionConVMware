@@ -140,33 +140,34 @@ Este laboratorio sirve como base para aprender:
 
 ## 📦 Estructura Actual del Proyecto
 
-Lab_VirtualizacionConVMware/
-│
-├── assets/
-│   └── images/
-│        ├── Esxi1_ConfigVM.PNG
-│        ├── Esxi1_HostClientWeb.png
-│        ├── Esxi1_HostClientRedes.png
-│        ├── Esxi1_VMKernel.png
-│        ├── Esxi1_VMKernel_ConfigNetwork.png
-│        ├── Esxi2_VMKernel.png
-│        ├── Esxi2_VMKernel_ConfigNetwork.png
-│        ├── Esxi3_ConfigVM.PNG
-│        ├── Esxi3_HostClientWeb.PNG
-│        ├── Esxi3_vDSwitch_1uplink.PNG
-│        ├── Esxi3_VMKernel.png
-│        ├── Esxi3_VMKernel_ConfigNetwork.png
-│        ├── Esxi3_vSwitch0.PNG
-│        ├── VMware_Software.PNG
-│        ├── VMware_ConfigAdaptadorRed.PNG
-│        ├── VMvCenter_vSphereClientWeb.PNG
-│        ├── VMvCenter_VMKernel.png
-│        ├── VMvCenter_DSwitch_distribuido.PNG
-│        ├── WinServerDNS_ConfigIP.png
-│        ├── WinServerDNS_ConfigVM.png
-│        └── WinServerDNS_Zonas.png
-│
-└── README.md
+┌─────────────────────────────────────────────────────────────┐
+│                Lab_VirtualizacionConVMware/                 │
+├─────────────────────────────────────────────────────────────┤
+│ assets/                                                     │
+│   └── images/                                               │
+│       ├── Esxi1_ConfigVM.PNG                                │
+│       ├── Esxi1_HostClientWeb.png                           │
+│       ├── Esxi1_HostClientRedes.png                         │
+│       ├── Esxi1_VMKernel.png                                │
+│       ├── Esxi1_VMKernel_ConfigNetwork.png                  │
+│       ├── Esxi2_VMKernel.png                                │
+│       ├── Esxi2_VMKernel_ConfigNetwork.png                  │
+│       ├── Esxi3_ConfigVM.PNG                                │
+│       ├── Esxi3_HostClientWeb.PNG                           │
+│       ├── Esxi3_vDSwitch_1uplink.PNG                        │
+│       ├── Esxi3_VMKernel.png                                │
+│       ├── Esxi3_VMKernel_ConfigNetwork.png                  │
+│       ├── Esxi3_vSwitch0.PNG                                │
+│       ├── VMware_Software.PNG                               │
+│       ├── VMware_ConfigAdaptadorRed.PNG                     │
+│       ├── VMvCenter_vSphereClientWeb.PNG                    │
+│       ├── VMvCenter_VMKernel.png                            │
+│       ├── VMvCenter_DSwitch_distribuido.PNG                 │
+│       ├── WinServerDNS_ConfigIP.png                         │
+│       ├── WinServerDNS_ConfigVM.png                         │
+│       └── WinServerDNS_Zonas.png                            │
+│                                                             │
+└── README.md                                                 ┘
 
 ## 🛠️ Próximas Mejoras
 
