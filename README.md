@@ -34,7 +34,7 @@ Las imágenes del repositorio se encuentran en:
 Aquí puedes ver algunas de las capturas principales utilizadas en el proyecto:
 
 ### 🔧 Configuración del Host ESXi
-assets/images/Esxi1_ConfigVM.PNG
+![](assets/images/Esxi1_ConfigVM.PNG)
 
 assets/images/Esxi1_HostClientWeb.png
 
