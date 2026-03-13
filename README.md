@@ -24,16 +24,19 @@ Este laboratorio reproduce un entorno real de un **datacenter virtual**.
 
 ## 🏗️ Arquitectura del Laboratorio
 
-Host Físico (Workstation Pro)
+Host Físico (VMware Workstation Pro)
 │
 ├── ESXi #1 (Management + VMkernel)
-  └── vCenter Server Appliance (VCSA)
-  ├── Gestión centralizada
-  ├── Inventario de hosts
-  └── vDSwitch distribuido
+│
+├── vCenter Server Appliance (VCSA)
+│   ├── Gestión centralizada
+│   ├── Inventario de hosts
+│   ├── vDSwitch distribuido
+│   └── DNS interno (Windows Server)
+│
 ├── ESXi #2 (Nodo adicional)
-├── ESXi #3 (Nodo adicional)
-└── DNS interno (Windows Server)
+│
+└── ESXi #3 (Nodo adicional)
 
 
 ## 📸 Imágenes del Proyecto
